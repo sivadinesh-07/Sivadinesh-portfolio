@@ -1,0 +1,173 @@
+/* =========================
+   FADE IN ANIMATION
+========================= */
+
+.fade-in{
+    animation:fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   FLOATING ANIMATION
+========================= */
+
+.float{
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* =========================
+   GLOW BUTTON
+========================= */
+
+.glow{
+
+    animation:glow 2s infinite;
+
+}
+
+@keyframes glow{
+
+    0%{
+        box-shadow:0 0 5px #00d4ff;
+    }
+
+    50%{
+        box-shadow:
+        0 0 20px #00d4ff,
+        0 0 40px #00d4ff;
+    }
+
+    100%{
+        box-shadow:0 0 5px #00d4ff;
+    }
+
+}
+
+/* =========================
+   SKILL BAR ANIMATION
+========================= */
+
+.html{
+    animation:htmlBar 2s ease;
+}
+
+.css{
+    animation:cssBar 2s ease;
+}
+
+.js{
+    animation:jsBar 2s ease;
+}
+
+.wp{
+    animation:wpBar 2s ease;
+}
+
+@keyframes htmlBar{
+    from{width:0;}
+    to{width:95%;}
+}
+
+@keyframes cssBar{
+    from{width:0;}
+    to{width:90%;}
+}
+
+@keyframes jsBar{
+    from{width:0;}
+    to{width:80%;}
+}
+
+@keyframes wpBar{
+    from{width:0;}
+    to{width:85%;}
+}
+
+/* =========================
+   HERO TEXT ANIMATION
+========================= */
+
+.hero h1{
+
+    animation:slideDown 1s ease;
+
+}
+
+.hero h2{
+
+    animation:slideUp 1.2s ease;
+
+}
+
+@keyframes slideDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes slideUp{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* =========================
+   SOCIAL ICON FLOAT
+========================= */
+
+.socials a{
+
+    animation:iconFloat 3s infinite;
+
+}
+
+@keyframes iconFloat{
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+}
