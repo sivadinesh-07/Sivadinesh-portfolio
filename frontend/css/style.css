@@ -24,18 +24,21 @@
     --loader-bg: #0b0f19;
 }
 
+/* ==========================================================================
+   CSK YELLOW & ROAR BLUE LIGHT THEME
+   ========================================================================== */
 body.light {
-    --bg-color: #f8fafc;
-    --text-color: #0f172a;
-    --card-bg: rgba(255, 255, 255, 0.8);
-    --card-hover-bg: rgba(255, 255, 255, 0.95);
-    --border-color: rgba(15, 23, 42, 0.08);
-    --primary-color: #0284c7;
-    --secondary-color: #0d9488;
-    --text-muted: #475569;
-    --shadow-color: rgba(2, 132, 199, 0.15);
-    --nav-bg: rgba(248, 250, 252, 0.6);
-    --loader-bg: #ffffff;
+    --bg-color: #fffdf0;
+    --text-color: #0b1a30;
+    --card-bg: rgba(255, 255, 255, 0.92);
+    --card-hover-bg: #ffffff;
+    --border-color: rgba(253, 185, 19, 0.28);
+    --primary-color: #fdb913;
+    --secondary-color: #004ba0;
+    --text-muted: #3b4e6b;
+    --shadow-color: rgba(253, 185, 19, 0.35);
+    --nav-bg: rgba(255, 253, 240, 0.88);
+    --loader-bg: #fffdf0;
 }
 
 body{
@@ -108,7 +111,8 @@ nav {
 }
 
 body.light nav {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(253, 185, 19, 0.15);
+    border-color: rgba(253, 185, 19, 0.35);
 }
 
 .logo {
@@ -184,7 +188,9 @@ nav ul li a:hover::after {
 }
 
 body.light #themeBtn {
-    background: rgba(0, 0, 0, 0.03);
+    background: rgba(253, 185, 19, 0.15);
+    border-color: rgba(253, 185, 19, 0.45);
+    color: #0b1a30;
 }
 
 #themeBtn:hover {
@@ -296,7 +302,24 @@ body.light #themeBtn {
 }
 
 body.light .btn {
-    color: #ffffff;
+    color: #0b1a30;
+    font-weight: 700;
+}
+
+body.light .hero span {
+    color: #d97706;
+}
+
+body.light .hero h2 {
+    color: #004ba0;
+}
+
+body.light .section-title {
+    color: #004ba0;
+}
+
+body.light .section-title::after {
+    background: #fdb913;
 }
 
 .btn:hover{
@@ -685,7 +708,8 @@ body.light .lang-card {
 }
 
 body.light .lang-icon {
-    background: rgba(13, 148, 136, 0.08);
+    background: rgba(0, 75, 160, 0.12);
+    color: #004ba0;
 }
 
 .lang-details {
@@ -785,7 +809,13 @@ body.light .journey-tabs {
 }
 
 body.light .journey-tab.active {
-    color: #0f172a;
+    color: #0b1a30;
+    font-weight: 700;
+}
+
+body.light .tab-slider {
+    background: linear-gradient(135deg, #fdb913 0%, #ffe066 100%);
+    box-shadow: 0 6px 20px rgba(253, 185, 19, 0.35);
 }
 
 /* Slide Indicator background */
@@ -1215,7 +1245,8 @@ body.light .journey-tab.active {
 }
 
 body.light .counter-icon {
-    background: rgba(2, 132, 199, 0.05);
+    background: rgba(253, 185, 19, 0.18);
+    color: #004ba0;
 }
 
 .counter-box:hover .counter-icon {
@@ -1384,7 +1415,9 @@ body.light .browser-mockup {
 }
 
 body.light .proj-tech-stack span {
-    background: rgba(15, 23, 42, 0.05);
+    background: rgba(253, 185, 19, 0.15);
+    color: #0b1a30;
+    border-color: rgba(253, 185, 19, 0.3);
 }
 
 .proj-actions {
@@ -1412,7 +1445,8 @@ body.light .proj-tech-stack span {
 }
 
 body.light .proj-btn.primary-btn {
-    color: #ffffff;
+    color: #0b1a30;
+    font-weight: 700;
 }
 
 .proj-btn.secondary-btn {
@@ -1498,7 +1532,8 @@ body.light .proj-btn.primary-btn {
 }
 
 body.light .cert-icon {
-    background: rgba(2, 132, 199, 0.05);
+    background: rgba(253, 185, 19, 0.18);
+    color: #004ba0;
 }
 
 .certificate-card h3 {
@@ -1646,7 +1681,8 @@ body.light .cert-icon {
 }
 
 body.light .method-icon {
-    background: rgba(2, 132, 199, 0.05);
+    background: rgba(253, 185, 19, 0.18);
+    color: #004ba0;
 }
 
 .contact-method-item:hover .method-icon {
@@ -1801,7 +1837,8 @@ body.light .input-group textarea {
 }
 
 body.light .submit-btn {
-    color: #ffffff;
+    color: #0b1a30;
+    font-weight: 700;
 }
 
 .submit-btn:hover {
@@ -1883,11 +1920,18 @@ footer p {
 }
 
 body.light .contact-toast--success {
-    background: rgba(13, 148, 136, 0.08);
+    background: rgba(253, 185, 19, 0.15);
+    border-color: #fdb913;
+    color: #0b1a30;
 }
 
 body.light .contact-toast--error {
-    background: rgba(239, 68, 68, 0.08);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+body.light #particles-js {
+    opacity: 0.35;
+    filter: sepia(100%) hue-rotate(5deg) saturate(350%);
 }
 
 /* =========================
