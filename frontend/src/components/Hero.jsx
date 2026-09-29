@@ -58,7 +58,7 @@ export default function Hero() {
       </div>
 
       {/* Resume Button */}
-      <a href="resume/Siva's_resume.pdf" className="btn" target="_blank" rel="noopener noreferrer">
+      <a href="/resume/siva_resume.pdf" className="btn" target="_blank" rel="noopener noreferrer">
         <i className="fas fa-file-pdf"></i> View Resume
       </a>
     </section>
