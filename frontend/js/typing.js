@@ -1,7 +1,8 @@
 const words = [
     "MERN Full Stack Developer",
     "UI/UX Designer",
-    "WordPress Developer"
+    "WordPress Developer",
+    "AWS Cloud Enthusiast"
 ];
 
 let wordIndex = 0;
