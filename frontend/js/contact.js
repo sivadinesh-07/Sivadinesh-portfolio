@@ -5,7 +5,7 @@
  */
 
 (function () {
-    const API_URL = 'http://localhost:5000/api/contact';
+    const API_URL = window.API_URL || '/api/contact';
 
     const form       = document.getElementById('contactForm');
     const btnText    = document.getElementById('contactBtnText');

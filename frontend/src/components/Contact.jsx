@@ -1,8 +1,8 @@
 // Contact.jsx - Beginner-friendly contact form with API integration
 import { useState } from 'react';
 
-// API endpoint URL for backend
-const API_URL = 'http://localhost:5000/api/contact';
+// API endpoint URL for backend (uses relative /api/contact on Vercel, or custom VITE_API_URL if configured)
+const API_URL = import.meta.env.VITE_API_URL || '/api/contact';
 
 export default function Contact() {
   // 1. Simple form input states
