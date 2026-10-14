@@ -1,12 +1,12 @@
-// Hero.jsx - Beginner-friendly Hero section with standard React state & useEffect
+// Hero.jsx - Highly professional executive Hero section
 import { useState, useEffect } from 'react';
 
 // Titles for typewriter effect
 const titles = [
-  "MERN Full Stack Developer",
+  "MERN Stack Developer",
   "UI/UX Designer",
-  "WordPress Developer",
-  "AWS Cloud Enthusiast"
+  "AWS Cloud Enthusiast",
+  "WordPress Developer"
 ];
 
 export default function Hero() {
@@ -18,50 +18,82 @@ export default function Hero() {
     const activeTitle = titles[titleIndex];
 
     if (charIndex < activeTitle.length) {
-      // Add one character at a time
       const timer = setTimeout(() => {
         setCurrentText((prev) => prev + activeTitle[charIndex]);
         setCharIndex(charIndex + 1);
-      }, 100);
+      }, 90);
       return () => clearTimeout(timer);
     } else {
-      // Pause when full word is typed, then switch to next word
       const resetTimer = setTimeout(() => {
         setCurrentText('');
         setCharIndex(0);
         setTitleIndex((titleIndex + 1) % titles.length);
-      }, 1500);
+      }, 1600);
       return () => clearTimeout(resetTimer);
     }
   }, [charIndex, titleIndex]);
 
   return (
     <section id="home" className="hero">
-      <h1>Hi, I'm <span>Sivadinesh R</span></h1>
-      <h2 id="typing">{currentText}</h2>
-      <p className="hero-subtitle">Fullstack Developer | UI/UX Designer</p>
-
-      {/* Contact Info */}
-      <div className="hero-contact">
-        <span><i className="fas fa-map-marker-alt"></i> Chennai, Tamilnadu, India</span>
-        <span><i className="fas fa-phone-alt"></i> (+91) 9940375646</span>
-        <span><i className="fas fa-envelope"></i> sivadinesh872@gmail.com</span>
+      {/* Availability Status Pill */}
+      <div className="hero-status-pill" data-aos="fade-down">
+        <span className="status-dot-pulse"></span>
+        <span>Available for Full-Time & Freelance Roles</span>
       </div>
 
-      {/* Social Links */}
-      <div className="hero-socials">
-        <a href="https://www.linkedin.com/in/sivadinesh-r-a497042a5/" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-linkedin"></i> LinkedIn
+      {/* Main Title & Typewriter */}
+      <h1 className="hero-title" data-aos="fade-up">
+        Hi, I'm <span className="hero-name-gradient">Sivadinesh R</span>
+      </h1>
+
+      <div className="hero-typing-wrap" data-aos="fade-up" data-aos-delay="100">
+        <span className="typing-prefix">I am a </span>
+        <h2 id="typing" className="typing-text">{currentText}</h2>
+      </div>
+
+      <p className="hero-bio" data-aos="fade-up" data-aos-delay="200">
+        Computer Science student engineering robust <strong>MERN Stack</strong> applications and crafting intuitive, user-centered <strong>UI/UX interfaces</strong> in Figma with modern design systems.
+      </p>
+
+      {/* Action Buttons */}
+      <div className="hero-cta-group" data-aos="fade-up" data-aos-delay="300">
+        <a href="#projects" className="hero-cta-btn primary-cta">
+          <i className="fas fa-layer-group"></i> Explore Projects
         </a>
-        <a href="https://github.com/sivadinesh-07" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-github"></i> GitHub
+        <a href="/resume/siva_resume.pdf" className="hero-cta-btn secondary-cta" target="_blank" rel="noopener noreferrer">
+          <i className="fas fa-file-pdf"></i> View Resume
+        </a>
+        <a href="#contact" className="hero-cta-btn outline-cta">
+          <i className="fas fa-paper-plane"></i> Contact Me
         </a>
       </div>
 
-      {/* Resume Button */}
-      <a href="/resume/siva_resume.pdf" className="btn" target="_blank" rel="noopener noreferrer">
-        <i className="fas fa-file-pdf"></i> View Resume
-      </a>
+      {/* Metadata & Quick Socials Strip */}
+      <div className="hero-meta-strip" data-aos="fade-up" data-aos-delay="400">
+        <div className="hero-meta-item">
+          <i className="fas fa-map-marker-alt"></i>
+          <span>Chennai, Tamil Nadu, India</span>
+        </div>
+        <div className="hero-meta-divider"></div>
+        <div className="hero-meta-item">
+          <i className="fas fa-envelope"></i>
+          <a href="mailto:sivadinesh872@gmail.com">sivadinesh872@gmail.com</a>
+        </div>
+        <div className="hero-meta-divider"></div>
+        <div className="hero-meta-item">
+          <i className="fas fa-phone-alt"></i>
+          <a href="tel:+919940375646">(+91) 9940375646</a>
+        </div>
+        <div className="hero-meta-divider"></div>
+        <div className="hero-meta-socials">
+          <a href="https://www.linkedin.com/in/sivadinesh-r-a497042a5/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn Profile">
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/sivadinesh-07" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub Profile">
+            <i className="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
     </section>
   );
 }

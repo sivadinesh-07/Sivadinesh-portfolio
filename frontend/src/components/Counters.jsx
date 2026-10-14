@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 // Counter items list
 const counterList = [
-  { icon: 'fas fa-cubes', target: 2, label: 'Projects Completed' },
+  { icon: 'fas fa-cubes', target: 3, label: 'Projects Completed' },
   { icon: 'fas fa-award', target: 5, label: 'Certifications Earned' },
   { icon: 'fas fa-globe', target: 2, label: 'Languages Spoken' },
 ];

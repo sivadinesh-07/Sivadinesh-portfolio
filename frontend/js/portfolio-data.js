@@ -9,43 +9,44 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const TECHNICAL_SKILLS = [
         {
-            category: "Frontend",
-            icon: "fab fa-html5 html-color",
+            category: "Programming Languages",
+            icon: "fas fa-code lang-color",
             delay: 0,
             skills: [
-                { name: "HTML / CSS", level: "95%" },
+                { name: "Java", level: "80%" },
+                { name: "C Language", level: "80%" },
+                { name: "JavaScript", level: "85%" }
+            ]
+        },
+        {
+            category: "Frontend Development",
+            icon: "fab fa-html5 html-color",
+            delay: 100,
+            skills: [
+                { name: "HTML5 / CSS3", level: "95%" },
                 { name: "JavaScript", level: "85%" },
                 { name: "React", level: "80%" },
                 { name: "Bootstrap", level: "85%" }
             ]
         },
         {
-            category: "Backend & DB",
+            category: "Backend & Database",
             icon: "fab fa-node-js node-color",
-            delay: 100,
-            skills: [
-                { name: "Node.js / Express", level: "80%" },
-                { name: "MongoDB", level: "75%" }
-            ]
-        },
-        {
-            category: "Tools & Cloud",
-            icon: "fas fa-tools tools-color",
             delay: 200,
             skills: [
-                { name: "Figma (UI/UX)", level: "90%" },
-                { name: "WordPress", level: "85%" },
-                { name: "Git / GitHub", level: "80%" },
-                { name: "AWS Cloud", level: "70%" }
+                { name: "Node.js / Express", level: "80%" },
+                { name: "MongoDB", level: "75%" },
+                { name: "SQL", level: "75%" }
             ]
         },
         {
-            category: "Programming",
-            icon: "fas fa-code lang-color",
+            category: "UI/UX & Tools",
+            icon: "fas fa-tools tools-color",
             delay: 300,
             skills: [
-                { name: "Java", level: "75%" },
-                { name: "C Language", level: "80%" }
+                { name: "Figma", level: "90%" },
+                { name: "WordPress", level: "85%" },
+                { name: "Git & GitHub", level: "85%" }
             ]
         }
     ];
@@ -68,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             logo: "WZ",
             isEdu: false,
             role: "UI/UX Designer & Lead",
-            date: "01/2025 – 09/2025",
+            date: "04/2025 – 09/2025",
             details: [
                 "Worked on client projects as a UI/UX Design Lead, creating intuitive and responsive UI designs using Figma, including wireframes and interactive prototypes.",
                 "Collaborated with developers to deliver visually appealing, user-centered web applications while maintaining design consistency and usability.",
@@ -97,9 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
             logo: "SA",
             isEdu: true,
             role: "BE in Computer Science Engineering",
-            date: "2023 – Present",
+            date: "2023 – 2027",
             description: "Currently pursuing a Bachelor of Engineering in Computer Science. Focused on core software engineering principles, algorithms, and web development stacks.",
-            badges: ["CGPA: 8.38 (up to 8th semester)", "Computer Science"],
+            badges: ["CGPA: 8.38/10 (up to Semester VI)", "Computer Science"],
             isSuccessBadgeIndex: 0
         },
         {
@@ -116,6 +117,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const PROJECTS = [
         {
+            title: "Harness Fashion E-Commerce UI & Prototype",
+            meta: "2025 | FIGMA & UI/UX",
+            desc: "Designed high-fidelity UI screens and interactive prototypes for a modern fashion e-commerce platform. Features intuitive user flows for product discovery, product details, and shopping interactions with strict design consistency.",
+            image: "assets/images/harness_fashion_ecommerce.jpg",
+            highlights: [
+                "Designed high-fidelity UI screens and interactive prototypes for a fashion e-commerce platform",
+                "Developed user flows for product discovery, product details, and shopping interactions",
+                "Applied UI/UX principles, typography, color theory, and layout consistency for a modern interface"
+            ],
+            tech: ["Figma", "UI/UX Design", "Wireframing", "Prototyping"],
+            github: "https://github.com/sivadinesh-07",
+            demo: "#",
+            isDesign: true,
+            delay: 0,
+            fadeDirection: "fade-right",
+            alternating: false
+        },
+        {
             title: "Disaster Relief Coordination App",
             meta: "2025 | MERN STACK",
             desc: "A full-stack disaster management application designed to connect victims, volunteers, and rescue authorities. Features real-time coordination feeds and live status grids to optimize logistics during critical emergencies.",
@@ -128,9 +147,9 @@ document.addEventListener('DOMContentLoaded', () => {
             tech: ["MongoDB", "Express.js", "React", "Node.js"],
             github: "https://github.com/sivadinesh-07",
             demo: "#",
-            delay: 0,
-            fadeDirection: "fade-right",
-            alternating: false
+            delay: 200,
+            fadeDirection: "fade-left",
+            alternating: true
         },
         {
             title: "Campus Connect Hub",
@@ -145,9 +164,9 @@ document.addEventListener('DOMContentLoaded', () => {
             tech: ["MongoDB", "Express.js", "React", "Node.js"],
             github: "https://github.com/sivadinesh-07",
             demo: "#",
-            delay: 200,
-            fadeDirection: "fade-left",
-            alternating: true
+            delay: 300,
+            fadeDirection: "fade-right",
+            alternating: false
         }
     ];
 
