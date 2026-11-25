@@ -20,21 +20,24 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Connect to MongoDB before handling API requests
-app.use(async (req, res, next) => {
+// Connect to MongoDB before handling database-backed API requests
+const ensureDB = async (req, res, next) => {
     try {
         await connectDB();
         next();
     } catch (error) {
         console.error('Database connection error in middleware:', error.message);
-        next();
+        res.status(503).json({
+            success: false,
+            error: 'Database connection unavailable. Please try again later.',
+        });
     }
-});
+};
 
 // ─── Routes ───────────────────────────────────────────────────────────────────
 // Support both /api/contact and /contact (for Vercel rewrites or direct mounting)
-app.use('/api/contact', contactRoutes);
-app.use('/contact', contactRoutes);
+app.use('/api/contact', ensureDB, contactRoutes);
+app.use('/contact', ensureDB, contactRoutes);
 
 // Health check
 app.get('/', (req, res) => {
